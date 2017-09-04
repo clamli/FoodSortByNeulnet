@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Value Result</title>
+		<link rel="stylesheet" href="{{ url_for('static',
+filename='style.css') }}">
+	</head>
+	<body>
+		<h3>Your (taste, health) vector:</h3>
+		<div>({{ taste }}, {{ health }})</div>
+		<h3>Prediction:</h3>
+		<div>This value of your vector is <strong>{{ prediction }}</strong>.</div>
+		<!-- <div id='button'>
+			<form action="/thanks" method="post">
+				<input type=submit value='Correct' name='feedback_button'>
+				<input type=submit value='Incorrect' name='feedback_button'>
+				<input type=hidden value='{{ prediction }}' name='prediction'>
+				<input type=hidden value='{{ content }}' name='review'>
+			</form>
+		</div> -->
+		<div id='button'>
+			<form action="/">
+				<input type=submit value='Submit another vector'>
+			</form>
+		</div>
+	</body>
+</html>
